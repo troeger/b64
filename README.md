@@ -3,5 +3,11 @@
 
 I was tired of watching people pasting their Kubernetes secrets on ad-bloated web pages, just for getting a base64 conversion.
 
-An yes, I know that there is a simple command-line for that.
+And yes, I know. There is a simple command-line for that.
+
+### Installation (macOS X)
+
+  - Clone the repository.
+  - Call `make`.
+  - Copy the resulting app file from the dist folder into your Programs folder.
 
