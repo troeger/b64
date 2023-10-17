@@ -4,7 +4,7 @@ import wx
 class MainFrame(wx.Frame):
            
     def onb64decode(self, event):
-        encoded_text = self.upper_box.GetLineText(0)
+        encoded_text = self.upper_box.GetValue()
         try:
             decoded_text = base64.b64decode(encoded_text).decode('utf-8')
             self.lower_box.SetValue(decoded_text)
@@ -12,7 +12,7 @@ class MainFrame(wx.Frame):
             self.lower_box.SetValue(f"Error on decoding: {e}")
 
     def onb64encode(self, event):
-        decoded_text = self.upper_box.GetLineText(0)
+        decoded_text = self.upper_box.GetValue()
         try:
             encoded_text = base64.b64encode(decoded_text.encode('utf-8')).decode('utf-8')
             self.lower_box.SetValue(encoded_text)
